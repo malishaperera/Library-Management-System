@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="bookVbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="215.0" style="-fx-background-radius: 15px;" stylesheets="@../assests/style/boox.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.BookWorm_library.controller.UserBookCardFormController">
+   <children>
+      <Label prefHeight="28.0" prefWidth="67.0" text="Book_ID :">
+         <VBox.margin>
+            <Insets left="5.0" top="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookId" layoutX="15.0" layoutY="20.0" prefHeight="28.0" prefWidth="67.0" text="label">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" left="8.0" />
+         </VBox.margin>
+      </Label>
+      <ImageView fx:id="bookImg" fitHeight="150.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/img/Book%20Cover%20Designs%20-%20TrifBookDesign.jpg" />
+         </image>
+         <VBox.margin>
+            <Insets left="50.0" top="5.0" />
+         </VBox.margin>
+      </ImageView>
+      <AnchorPane prefHeight="194.0" prefWidth="231.0">
+         <VBox.margin>
+            <Insets bottom="20.0" left="-8.0" right="-8.0" top="40.0" />
+         </VBox.margin>
+         <children>
+            <Label layoutX="17.0" layoutY="19.0" prefHeight="18.0" prefWidth="76.0" text="Book_Title :">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="90.0" prefHeight="18.0" prefWidth="76.0" text="Book_Genre:">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="52.0" prefHeight="18.0" prefWidth="76.0" text="Book_Author:">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="120.0" prefHeight="18.0" prefWidth="76.0" text="Book_Qty:">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="158.0" prefHeight="18.0" prefWidth="82.0" text="Book_branch:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBookTitle" layoutX="93.0" layoutY="15.0" prefHeight="26.0" prefWidth="118.0" promptText="book_title">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="txtBookAuthor" layoutX="93.0" layoutY="48.0" prefHeight="26.0" prefWidth="118.0" promptText="book_title" />
+            <TextField fx:id="txtBookGenre" layoutX="93.0" layoutY="82.0" prefHeight="26.0" prefWidth="118.0" promptText="book_title" />
+            <TextField fx:id="txtBookBranch" layoutX="94.0" layoutY="154.0" prefHeight="26.0" prefWidth="118.0" promptText="book_title" />
+            <TextField fx:id="txtBookQty" layoutX="92.0" layoutY="116.0" prefHeight="26.0" prefWidth="118.0" promptText="book_title" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="46.0" prefWidth="215.0">
+         <children>
+            <JFXButton fx:id="btnRead" layoutX="56.0" layoutY="3.0" onAction="#btnReadBookOnAction" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: lightgreen; -fx-background-radius: 15px;" text="Read">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainRoot" prefHeight="780.0" prefWidth="1173.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.BookWorm_library.controller.UserDashboardFormController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="84.0" prefHeight="434.0" prefWidth="108.0" style="-fx-background-color: lightgreen;" AnchorPane.bottomAnchor="262.0" AnchorPane.topAnchor="84.0">
+         <children>
+            <ImageView fx:id="imgBook" fitHeight="62.0" fitWidth="69.0" layoutX="21.0" layoutY="172.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/img/16-green-book-png-image-image.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="69.0" layoutX="21.0" layoutY="59.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/img/people.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="69.0" layoutX="21.0" layoutY="297.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/img/icons8-transaction-history-24.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnHomeOnAction" style="-fx-background-color: lightblue;" text="Home">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane fx:id="mainAnchor2" layoutX="132.0" layoutY="27.0" prefHeight="710.0" prefWidth="1093.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="132.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="27.0">
+         <children>
+            <BorderPane layoutX="13.0" layoutY="92.0" prefHeight="574.0" prefWidth="962.0">
+               <center>
+                  <ScrollPane prefHeight="618.0" prefWidth="1370.0" BorderPane.alignment="CENTER">
+                     <content>
+                        <GridPane fx:id="girdBook">
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+            <ComboBox fx:id="comBranchSelect" layoutX="80.0" layoutY="47.0" prefHeight="26.0" prefWidth="182.0" />
+            <ComboBox fx:id="comBookCategory" layoutX="319.0" layoutY="47.0" prefHeight="26.0" prefWidth="182.0" />
+            <Label layoutX="52.0" layoutY="26.0" prefHeight="18.0" prefWidth="91.0" text="Select Branch">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="295.0" layoutY="26.0" prefHeight="18.0" prefWidth="91.0" text="Select Genre">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="718.0" layoutY="27.0" prefHeight="18.0" prefWidth="84.0" text="Book Order :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="810.0" layoutY="18.0" prefHeight="36.0" prefWidth="137.0" text="Book Order">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

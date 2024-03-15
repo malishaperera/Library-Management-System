@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootLogin" prefHeight="400.0" prefWidth="504.0" style="-fx-background-radius: 15px;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.BookWorm_library.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="544.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/img/istockphoto-940972538-612x612.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtuserName" layoutX="162.0" layoutY="187.0" prefHeight="26.0" prefWidth="202.0" promptText="Enter user name" style="-fx-background-color: lightblue;" />
+      <PasswordField fx:id="txtPassword" layoutX="162.0" layoutY="245.0" prefHeight="26.0" prefWidth="202.0" promptText="Enter user password" style="-fx-background-color: lightblue;" />
+      <ImageView fx:id="showPassword" fitHeight="26.0" fitWidth="28.0" layoutX="336.0" layoutY="245.0" onMouseClicked="#showPasswordOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/img/close-eye.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="190.0" layoutY="321.0" onAction="#btnLoginOnAction" prefHeight="30.0" prefWidth="128.0" style="-fx-background-color: lightgreen; -fx-background-radius: 15px;" text="Login">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Hyperlink layoutX="233.0" layoutY="363.0" onAction="#singnUpOnAction" text="Sign Up" />
+   </children>
+</AnchorPane>
